@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table, th, td{
+            border: 1px solid;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <caption>lista de clientes</caption>
+        <thead>
+            <th scope="col" rowspan="2">codigo</th>
+            <th scope="col" colspan="3" id="datos">Datos personales</th>
+        <!-- </thead>
+        <thead> -->
+            <tr>
+                <th scope="col" header="datos">Nombres</th>
+                <th scope="col" header="datos">Apellidos</th>
+                <th scope="col" header="datos">Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Luis Miguel</td>
+                <td>Linares Castillo</td>
+                <td>luislinares@outlook.com</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Juan Carlos</td>
+                <td>Rodriguez Paredes</td>
+                <td>juanrodriguez@gmail.com</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Jose Ignacio</td>
+                <td>Guevara Ramirez</td>
+                <td>joseguevara@yahoo.es</td>
+            </tr>
+            <tfoot>
+                <tr>
+                    <th scope = "row" colspan="3">Total</th>
+                    <td>3</td>
+                </tr>
+            </tfoot>
+        </tbody>
+    </table>
+</body>
+</html>

@@ -1,0 +1,43 @@
+.cuadrado_1{
+    width: 200px;
+    height: 200px;
+    background: blue;
+    position: fixed;
+    left: 50px;
+    top: 0px;
+}
+
+.rectangulo_1{
+    width: 300px;
+    height: 300px;
+    background: green;
+}
+
+/* position: relative; changes the position of the element relative to 
+the parent element and relative to itself and where it would usually be
+ in the regular document flow of the page. This means that it's relative to
+  its original position within the parent element. */
+
+.cuadrado_2{
+    width: 200px;
+    height: 200px;
+    background: orange;
+    position: relative;
+    left: 400px;
+    top: 50px;
+}
+
+/* Absolute-positioned elements are completely taken out of the regular flow of the web page.
+They are not positioned based on their usual place in the document flow, 
+but based on the position of their ancestor. */
+
+
+.circulo{
+    width: 20px;
+    height: 20px;
+    background: red;
+    border-radius: 50%;
+    position: absolute;
+    left: 30px;
+    top: 0px;
+}
