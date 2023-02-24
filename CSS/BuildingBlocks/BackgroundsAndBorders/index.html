@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .purple_head {
+            background: linear-gradient(
+                    105deg,
+                    rgba(255, 255, 255, 0.2) 39%,
+                    rgba(51, 56, 57, 1) 96%
+                ) center center / 400px 200px no-repeat, url(big-star.png) center
+                no-repeat, rebeccapurple;
+        }
+        .box {
+            background-color: #567895;
+            padding: 5px;
+        }
+
+        h2 {
+            background-color: black;
+            color: white;
+        }
+        span {
+            background-color: rgba(255,255,255,.5);
+        }
+
+        .box_2 {
+            width: 200px;
+            height: 100px;
+            padding: 0.5em;
+            border: 1px solid #ccc;
+            margin: 20px;
+        }
+
+        .a {
+            background-image: url(star_1.png);
+            background-color: aqua;
+        }
+
+        .b {
+            background-image: url(star_2.png);
+            background-repeat: no-repeat;
+            
+            /* try these options */
+
+            background-position: bottom center;
+            background-position: 20px 10%;
+            background-position: 20px top;
+            background-position: top 20px right 10px;
+
+        }
+
+        .wrapper {
+            display: flex;
+        }
+        .box_3 {
+            background-image: url(balloons.jpg);
+            background-repeat: no-repeat;
+            background-size: 100px 10em;
+            width: 500px;
+            height: 150px;
+            padding: 0.5em;
+            border: 1px solid #ccc;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="purple_head">hola</h1>
+    <div class="box">
+        <h2>Background Colors</h2>
+        <p>Try changing the background <span>colors</span>.</p>
+    </div>
+    <div class="wrapper">
+        <div class="box_2 a"></div>
+        <div class="box_2 b"></div>
+    </div>
+    <div class="box_3"></div>
+</body>
+</html>

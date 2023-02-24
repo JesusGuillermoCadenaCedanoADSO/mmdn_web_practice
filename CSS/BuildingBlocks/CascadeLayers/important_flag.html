@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* @layer A, B;  */
+        @layer A, B; 
+
+        h1 { 
+            color: orange;
+            background-color: green; 
+            text-decoration: overline pink !important; 
+            box-shadow: 5px 5px lightgreen !important;
+        }
+
+        @layer A {
+            h1 {
+                color: grey; 
+                background-color: black !important;
+                text-decoration: line-through grey; 
+                box-shadow: -5px -5px lightblue !important;
+                font-style: normal;
+                font-weight: 900 !important;
+            }
+        }
+        @layer B {
+            h1 { 
+                color: aqua;
+                background: yellow !important;
+                text-decoration: underline aqua;
+                box-shadow: -5px 5px magenta !important;
+                font-style: italic;
+                font-weight: 100 !important;
+            }
+        }
+  
+    </style>
+</head>
+<body>
+    <div>
+        <h1 style="color: yellow;
+          background-color: maroon !important;">Inline styles</h1>
+    </div>
+</body>
+</html>

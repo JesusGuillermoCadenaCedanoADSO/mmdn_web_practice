@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :where(a.author){
+            text-decoration: overline;
+            color: red;
+        }
+
+         /* 1-0-0  - WINS!! */
+
+        #myElement {
+            color: green;
+        }
+
+        /* 0-4-0 */
+
+        .bodyClass .sectionClass .parentClass [id="myElement"] {
+            color: yellow; 
+        }
+
+        /* 1-0-0 */
+
+        #myElement2 {
+            color: yellow; 
+        }
+
+        /* 1-1-0  - WINS!! */
+
+        #myApp [id="myElement2"] {
+            color: green; 
+        }
+
+        @layer module, state;
+
+        @layer state {
+            .warning {
+                background-color: brown;
+            }
+            p {
+                text-align: left;
+            }
+        }
+
+        @layer module {
+            .warning {
+                text-align: left;
+                background-color: yellow;
+                color: white;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <p><a href="https://example.org">User agent styles</a></p>
+    <p><a href="https://example.org" class="author">Author styles</a></p>
+    <p class="warning">Beware of the zombies</p>
+    <div class="bodyClass">
+        <section class="sectionClass">
+            <div class="parentClass">
+                <h1 id="myElement">
+                    hola
+                </h1>
+                <div id="myApp">
+                    <h1 id="myElement2">
+                        que tal
+                    </h1>
+                </div>
+            </div>
+        </section>
+    </div>
+
+</body>
+</html>

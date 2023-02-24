@@ -1,0 +1,56 @@
+/* file: estilos.css */
+
+/* unlayered styles */
+/* body {
+    color: #333;
+  } */
+  
+  /* creates the first layer: `layout` */
+  @layer layout {
+    main {
+      display: grid;
+    }
+  }
+  
+  /* creates the second layer: an unnamed, anonymous layer */
+  @layer {
+    body {
+      margin: 0;
+      color: rgb(11, 0, 85);
+    }
+  }
+  
+  /* creates the third and fourth layers: `theme` and `utilities` */
+  @layer theme, layout, utilities;
+  
+  /* adds styles to the already existing `layout` layer */
+  @layer layout {
+    main {
+      color: #150;
+    }
+  }
+  
+  /* creates the fifth layer: an unnamed, anonymous layer */
+  @layer {
+    body {
+      margin: 10vw;
+    }
+  }
+
+  @layer page {
+    h2 {
+      text-decoration: overline; 
+      color: red;
+    }
+  }
+
+  @layer site {
+    h2 {
+      text-decoration: underline; 
+      color: rgb(128, 58, 0);
+    }
+  }
+
+  /* this does nothing */
+  @layer site, page;
+  
