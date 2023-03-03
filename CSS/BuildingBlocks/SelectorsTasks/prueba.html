@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seleccionar primeros hermanos de su tipo</title>
+    <style>
+        ul:first-of-type > li:nth-child(2){
+            font-weight: bold;
+        }
+        p + ul li:last-child{
+            color:blue;
+        }
+        ul:first-of-type li:nth-last-child(1){
+            background-color: orange;
+        }
+    </style>
+</head>
+
+<body>
+<div>
+    <p> My paragraph here. </p>
+    <ul>
+        <li> List Item 1 </li>
+        <li> List Item 2 </li>
+    </ul>
+    <ul>
+        <li> List Item 3 </li>
+        <li> List Item 4 </li>
+    </ul>   
+</div>
+</body>
+</html>

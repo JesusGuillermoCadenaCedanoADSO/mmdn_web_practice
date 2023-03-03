@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Task 2: Logical width and height</title>
+    <link rel="stylesheet" href="../styles.css"/>
+    <style>
+      body {
+        background-color: #fff;
+        color: #333;
+        font: 1.2em / 1.5 Helvetica Neue, Helvetica, Arial, sans-serif;
+        padding: 1em;
+        margin: 0;
+      }
+      .vertical {
+        writing-mode: vertical-rl;
+        /* border-block-start: 5px solid pink;
+        border-inline-end: 10px dotted rebeccapurple;
+        border-block-end: 1em double orange;
+        border-inline-start: 1px solid black; */
+      }
+
+      .box {
+        border: 5px solid rebeccapurple;
+        background-color: lightgray;
+        padding: 40px;
+        margin: 40px;
+        /* width: 200px; */
+        inline-size: 200px;
+        /* height: 100px; */
+        block-size: 100px;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <div class="box">Horizontal.</div>
+    <div class="box vertical">Vertical.</div>
+
+  </body>
+
+</html>

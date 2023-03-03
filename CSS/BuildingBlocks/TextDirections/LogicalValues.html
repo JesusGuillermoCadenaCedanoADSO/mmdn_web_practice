@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logical Values</title>
+    <style>
+        .box {
+            inline-size: 200px;
+            writing-mode: horizontal-tb;
+            border: 1px solid gray;
+            padding: 0.5em;
+        }
+
+        img{
+            float: inline-end;
+            margin-inline-end: 10px;
+            margin-block-end: 10px;
+        }
+        .wrapper {
+            border: 5px solid #ccc;
+            display: flex;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="box logical">
+          <img src="star_1.png" alt="star">
+          <p>This box uses logical properties. The star image has been floated inline-start, it also has a margin on the inline-end and block-end.</p>
+        </div>
+    </div>
+</body>
+</html>

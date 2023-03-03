@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid experiment</title>
+    <style>
+        html {
+            --dark-purple: #6e008b;
+            --background: hsl(0deg, 100%, calc(100%*var(--mode)));
+            --mode: var(--demo-mode, var(--os-mode,1));
+        }
+        body {
+            min-height: 100vh;
+            display:grid;
+            grid-gap: 1em;
+            grid : 'header' auto
+                    'nav' auto
+                    'main' 1fr
+                    'footer' auto
+                    / 1fr;
+                }
+
+        @media (min-width: 40em){
+            body{
+                grid:   'header header' auto
+                        'nav main' 1fr
+                        'nav footer' auto
+                        / 12em 1fr;
+            }
+        }
+
+        header {grid-area: header;}
+        nav {grid-area: nav;}
+        main {grid-area: main;}
+        footer {grid-area: footer;}
+
+        body {
+            background: var(--dark-purple);
+        }
+
+        header,
+        nav,
+        main,
+        footer {
+            background: var(--background);
+            padding: 1em;
+        }
+
+        
+        
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>header</h1>
+    </header>
+    <nav>
+        <h2>nav</h2>
+        <ul>
+            <li>item</li>
+            <li>item</li>
+            <li>item</li>
+        </ul>
+    </nav>
+    <main>
+        <h2>main</h2>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Labore tempora totam temporibus sint. Consequatur, laborum nisi necessitatibus deserunt ad recusandae voluptas maiores molestiae eveniet tenetur, facere quisquam quidem quia rerum!    
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Accusamus suscipit nisi tempora reprehenderit eaque enim
+            cupiditate explicabo deserunt aliquam officiis rerum
+            sapiente aperiam voluptate laborum, a ex, voluptates
+            debitis beatae.
+        </p>
+    </main>
+    <footer>
+        <h2>footer</h2>
+    </footer>
+</body>
+</html>
