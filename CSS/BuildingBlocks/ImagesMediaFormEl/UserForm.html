@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styling User Form</title>
+    <style>
+        input[type="text"],
+        input[type="email"] {
+            border: 2px solid #000;
+            margin: 0 0 1em 0;
+            padding: 10px;
+            width: 100%;
+        }
+        input[type="submit"]{
+            border: 3px solid #333;
+            background-color: #999;
+            border-radius: 5px;
+            padding: 10px 2em;
+            font-weight: bold;
+            color: #fff;
+            text-align: center;
+        }
+
+        input[type="submit"]:hover, input[type="submit"]:focus
+        {
+            background-color: #333;
+        }
+        form > div {
+            display: flex;
+        }
+        .buttons {
+            justify-content: center;
+        }
+        label {
+            width: 10em;
+        }
+        .preview {
+            width: 90%;
+            max-width: 700px;
+            border: 1px solid #4D4E53;
+            border-radius: 2px;
+            padding: 10px 14px 10px 10px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <section class="preview">
+        <form>
+            <div>
+                <label for="name">Name</label>
+                <input type="text" id="name">
+            </div>
+            <div>
+                <label for="email">Email</label>
+                <input type="email" id="email">
+            </div>
+            <div class="buttons">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+    </section>
+</body>
+</html>

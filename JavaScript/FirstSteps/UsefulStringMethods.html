@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Methods</title>
+</head>
+<body>
+    <h1>Fixing capitalization</h1>
+    <div class="output">
+        <ul>
+
+        </ul>
+    </div>
+    <h1>Making new strings from old parts</h1>
+    <div class="output_2">
+        <ul>
+
+        </ul>
+    </div>
+</body>
+<script>
+
+    //fixing capitalization
+    const list = document.querySelector('.output ul');
+    list.innerHTML = '';
+    const cities = ['lonDon', 'ManCHESTer', 'BiRmiNGHAM', 'liVERpoOL'];
+
+    for (const city of cities) {
+    // write your code just below here
+    let new_variable = city.toLowerCase();
+    let first_letter= new_variable.slice(0,1);
+    let other_letters=new_variable.slice(1);
+    let upper_first_letter = first_letter.toUpperCase();
+    let resultado = upper_first_letter + other_letters;
+    const result = resultado;
+    const listItem = document.createElement('li');
+    listItem.textContent = result;
+    list.appendChild(listItem);
+
+    //making new strings from old parts
+
+    const list_2 = document.querySelector('.output_2 ul');
+    list_2.innerHTML = '';
+    const stations = ['MAN675847583748sjt567654;Manchester Piccadilly',
+                  'GNF576746573fhdg4737dh4;Greenfield',
+                  'LIV5hg65hd737456236dch46dg4;Liverpool Lime Street',
+                  'SYB4f65hf75f736463;Stalybridge',
+                  'HUD5767ghtyfyr4536dh45dg45dg3;Huddersfield'];
+
+    for (const station of stations) {
+        // write your code just below here
+
+        const result_2 = station;
+        let StationCode=result_2.slice(0,3);
+        let IndexSemicolon = Number(result_2.search(";"));
+        //console.log(IndexSemicolon);
+        let StationName = result_2.slice(IndexSemicolon + 1);
+        let FinalString = StationCode +": "+StationName;
+        const listItem_2 = document.createElement('li');
+        listItem_2.textContent = FinalString;
+        list_2.appendChild(listItem_2);
+    }
+}
+</script>
+</html>

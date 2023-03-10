@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Min and Max Sizes</title>
+    <style>
+        .box {
+            border: 5px solid darkblue;
+            min-height: 150px;
+            width: 200px;
+        }
+        .wrapper {
+            display: flex;
+        }
+        .wrapper > *{
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="box"></div>
+        <div class="box">These boxes both have a min-height set, this box has content in it which will need more space than the assigned height, and so it grows from the minimum.</div>
+    </div>
+</html>
